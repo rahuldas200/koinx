@@ -94,7 +94,6 @@ const Performance = () => {
             </div>
 
           </div>
-
           <div className='flex flex-col gap-3 w-6/12'>
             <div className='flex justify-between py-3 border-b-[2px]  border-b-opacity-75'>
               <p className='opacity-65'>Market Cap</p>
