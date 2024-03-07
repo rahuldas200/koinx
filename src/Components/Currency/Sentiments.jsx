@@ -9,21 +9,21 @@ const Sentiments = () => {
 
         {
             id:1,
-            img:<FaBook/>,
+            img:<FaBook className='text-white'/>,
             title:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptatum ",
-            paragraph:"Lorem ipsum,   molestias beatae cupiditate suscipit hic modi similique ducimus numquam esse ullam! Praesentium minima blanditiis eos recusandae animi doloremque totam modi corporis!",
+            paragraph:"Lorem ipsum,   ducimus numquam esse ullam! Praesentium minima blanditiis eos recusandae animi doloremque totam modi corporis!",
         },
         {
             id:2,
-            img:<FaBook/>,
+            img:<FaBook className='text-white'/>,
             title:"Lorem ipsum dolor sit amet consectetur  atque a dolorum laborum.",
-            paragraph:"Lorem ipsum,  aperiam ea sed, molestias beatae cupiditate suscipit hic modi similique ducimus numquam esse ullam! Praesentium minima blanditiis eos recusandae animi doloremque totam modi corporis!",
+            paragraph:"Lorem ipsum, modi similique ducimus numquam esse ullam! Praesentium minima blanditiis eos recusandae animi doloremque totam modi corporis!",
         },
         {
             id:3,
-            img:<FaBook/>,
+            img:<FaBook className='text-white'/>,
             title:"Lorem ipsum dolor sit amet consectetur  atque a dolorum laborum.",
-            paragraph:"Lorem ipsum,  aperiam ea sed, molestias beatae cupiditate suscipit hic modi similique ducimus numquam esse ullam! Praesentium minima blanditiis eos recusandae animi doloremque totam modi corporis!",
+            paragraph:"Lorem ipsum,  Praesentium minima blanditiis eos recusandae animi doloremque totam modi corporis!",
         },
     ]
 
@@ -44,44 +44,51 @@ const Sentiments = () => {
         
     };
 
-    const buyPercentage = 60;
-    const sellPercentage = 30;
-    const holdPercentage = 10;
+    const buyPercentage = 76;
+    const sellPercentage = 8;
+    const holdPercentage = 16;
 
   return (
-    <div className=''>
+    <div className='p-5 flex flex-col gap-5'>
         <div>
-            <h1>Sentiments</h1>
-            <div>
-                <h1>Fandamentals</h1>
-                <MdInfo/>
+            <h1 className='text-xl font-bold mb-3'>Sentiments</h1>
+            <div className='flex items-center gap-3'>
+                <h1 className='text-base font-bold opacity-60'>Key events</h1>
+                <MdInfo className='text-xl opacity-60 mt-1'/>
             </div>
         </div>
-        <div>
-            <div className='flex'>
+        <div className=''>
+            <div className='flex gap-5'>
                 {
                    data.slice(startIndex, endIndex).map((element, index) =>(
-                    <div key={index} className='flex'>
-                            <div className=''>
-                                {element.img}
+                    <div key={index} className='flex gap-5 bg-blue-100 p-3 rounded-lg'>
+                            <div className='w-[10%]'>
+                                <div className='p-2 bg-blue-700 rounded-full flex justify-center items-center'>
+                                    {element.img}
+                                </div>
                             </div>
                             <div>
                                 <p>{element.title}</p>
                                 <p>{element.paragraph}</p>
                             </div>
-                        </div>
+                    </div>
                     ))
                 }
+
+                
             </div>
-            <div>
-                <button onClick={handleNextReviews}> <FaChevronRight/> </button>
+            <div className='p-2 bg-slate-400 opacity-85 w-10 h-10 rounded-full flex justify-center items-center absolute top-[32%] right-[3px]  '>
+                <button className='' onClick={handleNextReviews}>
+                    <FaChevronRight className='text-white'/>
+                </button>
             </div>
+
         </div>
 
         <div>
-            <div>
-                <p>Analust Estimates</p>
-                <MdInfo/>
+            <div className='flex items-center gap-3'>
+                <p className='text-base font-bold opacity-60' >Analust Estimates</p>
+                <MdInfo  className='text-xl opacity-60 mt-1'/>
             </div>
             <div>
                 <StockAnalysis buyPercentage={buyPercentage} sellPercentage={sellPercentage} holdPercentage={holdPercentage}/>

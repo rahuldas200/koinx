@@ -28,7 +28,7 @@ const Cryptocurrencies = () => {
           <div className='bg-white rounded-md'>
             <Performance/>
           </div>
-          <div className='bg-white mb-14 rounded-md '>
+          <div className='bg-white mb-14 rounded-md relative '>
             <Sentiments/>
           </div>
           <div className='bg-white mb-6 rounded-md'>
