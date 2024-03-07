@@ -81,7 +81,7 @@ const Performance = () => {
               <p>{CurrencyPerformance?.low_24h} / {CurrencyPerformance?.high_24h}</p>
             </div>
             <div className='flex justify-between py-3 border-b-[2px]  border-b-opacity-75'>
-              <p className='opacity-65'>7d Low / 7d High</p>
+              <p className='opacity-65 '>7d Low / 7d High</p>
               <p>{CurrencyPerformance?.current_price}</p>
             </div>
             <div className='flex justify-between py-3 border-b-[2px]  border-b-opacity-75'>
